@@ -17,7 +17,7 @@ public class Convertor {
 	}
 	
 	/*Methods*/
-	public float[][] readImage(String filePath) throws IOException{
+	public double[][] readImage(String filePath) throws IOException{
 		imageLocation = new File(filePath);
 
 		image = ImageIO.read(imageLocation);
@@ -25,7 +25,7 @@ public class Convertor {
 		row = image.getWidth();
 		col = image.getHeight();
 		
-		float[][] pixels = new float[col][row];
+		double[][] pixels = new double[col][row];
 		
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
